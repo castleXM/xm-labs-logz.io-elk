@@ -31,7 +31,8 @@ Logz.io provides the world’s most popular open-source log management platform,
 5. Add in the Integration URL from the Comm Plan's Inbound Integration
 6. Select POST Method
 7. Add in the following Code to the BODY (You can amend this as you see fit, but this will get you started):
-   ```
+
+``
 {
   "alert_title": "{{alert_title}}",
   "alert_description": "{{message}}",
@@ -39,6 +40,7 @@ Logz.io provides the world’s most popular open-source log management platform,
   "alert_event_samples": "{{alert_event_samples}}",
   "text": "{{text}}"
 }
+``
 
 8. Save it.
 9. Now, add an ALERT DEFINITION
