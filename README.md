@@ -50,7 +50,7 @@ Logz.io provides the world’s most popular open-source log management platform,
 13. CONDITION can, for testing, be set as GREATER THAN, with a THRESHOLD of 0 OVER A PERIOD of 5 Minutes
 14. SAVE ALERT and goto DEFINITIONS to Name, Describe and set a Severity Level. 
 15. TRIGGERS will allow you to manage how often you're notified (SUPPRESS NOTIFICATIONS FOR x) and also specify the NOTIFICATIONS ENDPOINTS (use the one you setup earlier). You can also opt in your email here - it's a good way of checking that Logz.io is actually having the Alert triggered based on your setup above. 
-   ```
+   
 ## xMatters set up
 
 1. Load in the attached Comm Plan
