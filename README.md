@@ -13,6 +13,7 @@ Logz.io provides the world’s most popular open-source log management platform,
 * LogzioElkAlert.zip - The comm plan (that has all the scripts and email format and such)
 * CURL.txt - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
 * mysqllogfile.sql - an example MySQL log file that you can upload into Logz.io using the above CURL script
+* Logz-io.mp4 - Video example of 
 
 # Installation
 1. Create your Logz.io account (By all means hookup to an actual server to read logs, otherwise carry out the steps below); You'll need to follow instructions within Logz.io to setup Alerts, Triggers and Thresholds, as well as an endpoint in both Logz.io and xM. 
