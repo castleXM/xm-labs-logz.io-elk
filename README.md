@@ -10,7 +10,7 @@ Logz.io provides the world’s most popular open-source log management platform,
 
 # Files
 * <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/Logz-io_IB.js">Logz-io_IB.js</a> - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Comm Plan.
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/url">LogzioElkAlert.zip</a> - The comm plan (that has all the scripts and email format and such)
+* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/LogzioElkAlert.zip">LogzioElkAlert.zip</a> - The comm plan (that has all the scripts and email format and such)
 * <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/CURL.txt">CURL.txt</a> - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
 * <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/mysqllogfile.sql">mysqllogfile.sql</a> - an example MySQL log file that you can upload into Logz.io using the above CURL script
 * <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/media/Logz-io.mp4">Logz-io.mp4</a> - Video example of it
