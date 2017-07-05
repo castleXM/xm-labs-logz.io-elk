@@ -1,6 +1,3 @@
-
----
-
 # Logz.io
 Logz.io provides the world’s most popular open-source log management platform, ELK (Elasticsearch, Logstash and Kibana), as a fast, secure and scalable cloud-based service with enterprise-grade enhancements. This xM Labs Integration allows you to connect up a Logz.io trial instance to an xMatters On Demand account to showcase the ease of passing log alerts (based on specified triggers) to xMatters. 
 
@@ -9,11 +6,11 @@ Logz.io provides the world’s most popular open-source log management platform,
 * xMatters account
 
 # Files
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/Logz-io_IB.js">Logz-io_IB.js</a> - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Comm Plan.
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/LogzioElkAlert.zip">LogzioElkAlert.zip</a> - The comm plan (that has all the scripts and email format and such)
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/CURL.txt">CURL.txt</a> - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/mysqllogfile.sql">mysqllogfile.sql</a> - an example MySQL log file that you can upload into Logz.io using the above CURL script
-* <a href="https://github.com/ntalbot-xm/logz.io-elk/blob/master/media/Logz-io.mp4">Logz-io.mp4</a> - Video example of it
+* [Logz-io_IB.js](Logz-io_IB.js) - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Comm Plan.
+* [LogzioElkAlert.zip](LogzioElkAlert.zip) - The comm plan
+* [CURL.txt](CURL.txt) - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
+* [mysqllogfile.sql](mysqllogfile.sql) - an example MySQL log file that you can upload into Logz.io using the above CURL script
+* [media/Logz-io.mp4](Logz-io.mp4) - Video example of the integration in action
 
 # Installation
 
@@ -48,10 +45,8 @@ Logz.io provides the world’s most popular open-source log management platform,
    
 ## xMatters set up
 
-1. Load in the attached Comm Plan
-2. Review the Form's (Elk Alert from Logz.io) configuration - you may want to change the message options and default group(s)
-3. Ensure the Path within your Inbound Integration is correctly configured to the aforementioned form
-4. That should be it!
+1. Load in the [LogzioElkAlert.zip](LogzioElkAlert.zip) Comm Plan
+2. Review the Form's (Elk Alert from Logz.io) configuration - add a default group or user in the recipients section
 
 # Testing
 To test, simply open a Terminal/Command Prompt and run the (edited) CURL file provided (You'll need to amend your CURL script to the relevant path of your MySQL log). That should upload your MySQL.log file into the KIBANA tab within Logz.io (It can take a minute or two) - keep refreshing the screen. 
@@ -60,4 +55,8 @@ To test, simply open a Terminal/Command Prompt and run the (edited) CURL file pr
 That should then show up, trigger your alert threshold and send the info to xMatters (where you can monitor the IB Activity Stream or Reports tab to see what's happening, or not happening)
 
 # Troubleshooting
-Steps mostly outlined above. If you're still stuck, reach out to an xPert. 
+If using the curl command, verify any errors printed. the `-v` option will put curl into verbose mode and more information will be printed to the terminal. 
+
+If the curl command exits ok, check the Activity Stream for the `Logz.io integration` inbound integration and inspect for any errors. 
+
+If the activity stream does not contain errors, check to see if an event was created and check the event log for more details. 
