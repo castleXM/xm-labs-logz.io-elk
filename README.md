@@ -1,6 +1,10 @@
 # Logz.io
 Logz.io provides the world’s most popular open-source log management platform, ELK (Elasticsearch, Logstash and Kibana), as a fast, secure and scalable cloud-based service with enterprise-grade enhancements. This xM Labs Integration allows you to connect up a Logz.io trial instance to an xMatters On Demand account to showcase the ease of passing log alerts (based on specified triggers) to xMatters. 
 
+Check out the video:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/T6QuCnfr1vY/0.jpg)](https://www.youtube.com/watch?v=T6QuCnfr1vY)
+
 # Pre-Requisites
 * logz.io account (https://logz.io/)
 * xMatters account
