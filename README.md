@@ -5,6 +5,15 @@ Check out the video:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/T6QuCnfr1vY/0.jpg)](https://www.youtube.com/watch?v=T6QuCnfr1vY)
 
+---------
+
+<kbd>
+  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</kbd>
+
+---------
+
+
 # Pre-Requisites
 * logz.io account (https://logz.io/)
 * xMatters account
