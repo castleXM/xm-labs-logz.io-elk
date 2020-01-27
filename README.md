@@ -19,8 +19,8 @@ Check out the video:
 * xMatters account
 
 # Files
-* [Logz-io_IB.js](Logz-io_IB.js) - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Comm Plan.
-* [LogzioElkAlert.zip](LogzioElkAlert.zip) - The comm plan
+* [Logz-io_IB.js](Logz-io_IB.js) - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Workflow.
+* [LogzioElkAlert.zip](LogzioElkAlert.zip) - The workflow
 * [CURL.txt](CURL.txt) - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
 * [mysqllogfile.sql](mysqllogfile.sql) - an example MySQL log file that you can upload into Logz.io using the above CURL script
 * [media/Logz-io.mp4](Logz-io.mp4) - Video example of the integration in action
@@ -33,7 +33,7 @@ Check out the video:
 2. Once logged in, goto Alerts and click ALERT ENDPOINTS
 3. ADD ENDPOINT, selecting a CUSTOM type
 4. Give it a Name (xMatters is usually useful) and a Description
-5. Add in the Integration URL from the Comm Plan's Inbound Integration
+5. Add in the Integration URL from the Workflows's Inbound Integration
 6. Select POST Method
 7. Add in the following Code to the BODY (You can amend this as you see fit, but this will get you started):
 
