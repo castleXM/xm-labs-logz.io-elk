@@ -19,10 +19,7 @@ Check out the video:
 * xMatters account
 
 # Files
-* [Logz-io_IB.js](Logz-io_IB.js) - The Integration Builder JS to setup the inbound integration into xM, should you need it standalone to the Workflow.
 * [LogzioElkAlert.zip](LogzioElkAlert.zip) - The workflow
-* [CURL.txt](CURL.txt) - A simple CURL command that'll allow you to force a log file (below) into Logz.io to mimmick a log file being read by Logz.io off a real server (You'll need to amend with the filepath of the SQL file AND your Logz.io Token Key)
-* [mysqllogfile.sql](mysqllogfile.sql) - an example MySQL log file that you can upload into Logz.io using the above CURL script
 * [media/Logz-io.mp4](Logz-io.mp4) - Video example of the integration in action
 
 # Installation
@@ -32,12 +29,13 @@ Check out the video:
 1. Create a free trial at https://logz.io/ if you need an account
 2. Once logged in, goto Alerts and click ALERT ENDPOINTS
 3. ADD ENDPOINT, selecting a CUSTOM type
-4. Give it a Name (xMatters is usually useful) and a Description
-5. Add in the Integration URL from the Workflows's Inbound Integration
-6. Select POST Method
-7. Add in the following Code to the BODY (You can amend this as you see fit, but this will get you started):
+    1. Give it a Name (xMatters is usually useful) and a Description
+    2. Add in the Integration URL from the Workflows's Inbound Integration
+    3. Select POST Method
+    4. Under headers add `content-type=application/json`
+4. Add in the following Code to the BODY (You can amend this as you see fit, but this will get you started):
 
-``
+```
 {
   "alert_title": "{{alert_title}}",
   "alert_description": "{{message}}",
@@ -45,31 +43,19 @@ Check out the video:
   "alert_event_samples": "{{alert_event_samples}}",
   "text": "{{text}}"
 }
-``
+```
 
-8. Save it.
-9. Now, add an ALERT DEFINITION
-10. Within CONDITIONS, you can specify a QUERY (if you just want to test the integration, put * here for now)
-11. Under TRIGGER IF condition, select how you want the alert to trigger (# of events is a good starting point)
-12. GROUP BY can be left as 'None'
-13. CONDITION can, for testing, be set as GREATER THAN, with a THRESHOLD of 0 OVER A PERIOD of 5 Minutes
-14. SAVE ALERT and goto DEFINITIONS to Name, Describe and set a Severity Level. 
-15. TRIGGERS will allow you to manage how often you're notified (SUPPRESS NOTIFICATIONS FOR x) and also specify the NOTIFICATIONS ENDPOINTS (use the one you setup earlier). You can also opt in your email here - it's a good way of checking that Logz.io is actually having the Alert triggered based on your setup above. 
+5. Save it.
+6. Now, add an alert definition that uses the alert endpoint.
    
-## xMatters set up
+# xMatters set up
 
-1. Load in the [LogzioElkAlert.zip](LogzioElkAlert.zip) Comm Plan
+1. Load in the [LogzioElkAlert.zip](LogzioElkAlert.zip) workflow
 2. Review the Form's (Elk Alert from Logz.io) configuration - add a default group or user in the recipients section
+3. In the **Elk Alert** workflow, update the **Create Event** step to include any recipients.
 
 # Testing
-To test, simply open a Terminal/Command Prompt and run the (edited) CURL file provided (You'll need to amend your CURL script to the relevant path of your MySQL log). That should upload your MySQL.log file into the KIBANA tab within Logz.io (It can take a minute or two) - keep refreshing the screen. 
-(Not working? Did you amend the TOKEN in the CURL command with the TOKEN from your Logz.io account?)
-
-That should then show up, trigger your alert threshold and send the info to xMatters (where you can monitor the IB Activity Stream or Reports tab to see what's happening, or not happening)
+Test the notification endpoint by editing it and clicking Test at the bottom of the page. This should show up in the activity log inside of Flow Designer for the Elk Alert workflow in xMatters.
 
 # Troubleshooting
-If using the curl command, verify any errors printed. the `-v` option will put curl into verbose mode and more information will be printed to the terminal. 
-
-If the curl command exits ok, check the Activity Stream for the `Logz.io integration` inbound integration and inspect for any errors. 
-
 If the activity stream does not contain errors, check to see if an event was created and check the event log for more details. 
