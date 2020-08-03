@@ -20,7 +20,6 @@ Check out the video:
 
 # Files
 * [LogzioElkAlert.zip](LogzioElkAlert.zip) - The workflow
-* [media/Logz-io.mp4](Logz-io.mp4) - Video example of the integration in action
 
 # Installation
 
