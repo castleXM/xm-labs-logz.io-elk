@@ -20,7 +20,7 @@ Check out the video:
 
 # Files
 * [LogzioElkAlert.zip](LogzioElkAlert.zip) - The workflow
-* [media/logzio.png](media/logsio.png) - Logz.io Logo
+* [logzio.png](logsio.png) - Logz.io Logo
 
 # Installation
 
