@@ -13,6 +13,9 @@ Check out the video:
 
 ---------
 
+An updated version of this integration is available, supporting the latest version of Logz.io and based on xMatters Flow Designer so you can easily connect other tools to your toolchain. [Learn more](http://help.xmatters.com/integrations/#cshid=Logzio).
+
+---------
 
 # Pre-Requisites
 * logz.io account (https://logz.io/)
