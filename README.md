@@ -13,7 +13,7 @@ Check out the video:
 
 ---------
 
-An updated version of this integration is available, supporting the latest version of Logz.io and based on xMatters Flow Designer so you can easily connect other tools to your toolchain. [Learn more](http://help.xmatters.com/integrations/#cshid=Logzio).
+An updated version of this integration is available. You can install the new version right from the Workflow Templates directory within your xMatters instance. [Learn more](http://help.xmatters.com/integrations/#cshid=Logzio).
 
 ---------
 
